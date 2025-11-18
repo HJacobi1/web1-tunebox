@@ -1,94 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TuneBox — Protótipo</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <div>
-      <h1>TuneBox</h1>
-      <p class="lead">Cadastre álbuns, escreva reviews e mantenha seu portfólio musical.</p>
-    </div>
-  </header>  <main class="layout">
-    <aside class="card">
-      <h3>Novo Álbum</h3>
-      <form id="albumForm">
-        <label for="nome">Título</label>
-        <input id="nome" required type="text" placeholder="Nome do álbum" /><label for="data">Data de lançamento</label>
-    <input id="data" type="date" />
-
-    <label for="artista">Artista</label>
-    <input id="artista" type="text" placeholder="Artista principal" />
-
-    <label for="genero">Gênero</label>
-    <input id="genero" type="text" placeholder="Ex: Eletronic, Rock" />
-
-    <label for="capa">Capa (imagem)</label>
-    <input id="capa" type="file" accept="image/*" />
-    <div style="margin-top:8px" id="capaPreview"></div>
-
-    <hr />
-    <h4>Músicas</h4>
-    <div id="songsContainer" class="songs-list"></div>
-    <button type="button" id="addSongBtn" class="btn ghost">+ Adicionar música</button>
-
-    <div class="form-actions">
-      <button class="btn" type="submit">Salvar álbum</button>
-      <button class="btn ghost" type="button" id="resetAlbum">Limpar</button>
-    </div>
-  </form>
-
-  <hr />
-
-  <h3>Review rápido</h3>
-  <form id="reviewForm">
-    <label for="albumSelect">Álbum</label>
-    <select id="albumSelect"></select>
-
-    <label>Estrelas</label>
-    <div id="starPicker" class="stars"></div>
-
-    <label for="obs">Observações</label>
-    <textarea id="obs" rows="3"></textarea>
-
-    <div class="form-actions">
-      <button class="btn" type="submit">Salvar review</button>
-      <button class="btn ghost" type="button" id="resetReview">Limpar</button>
-    </div>
-  </form>
-
-  <footer>Os dados são armazenados localmente.</footer>
-</aside>
-
-<section>
-  <div class="card">
-    <h3>Álbuns</h3>
-    <div class="albums" id="albumsList"></div>
-  </div>
-
-  <div class="card" id="detailCard" hidden>
-    <div class="detail-header">
-      <div class="cover" id="detailCover"></div>
-      <div class="detail-info">
-        <h3 id="detailTitle"></h3>
-        <div id="detailMeta"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TuneBox — Protótipo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>TuneBox</h1>
+        <p class="lead">
+          Cadastre álbuns, escreva reviews e mantenha seu portfólio musical.
+        </p>
       </div>
-      <div class="actions" id="detailActions"></div>
-    </div>
+    </header>
+    <main class="layout">
+      <aside class="card">
+        <h3>Novo Álbum</h3>
+        <form id="albumForm">
+          <label for="nome">Título</label>
+          <input
+            id="nome"
+            required
+            type="text"
+            placeholder="Nome do álbum"
+          /><label for="data">Data de lançamento</label>
+          <input id="data" type="date" />
 
-    <hr />
-    <h4>Músicas</h4>
-    <div id="detailSongs"></div>
+          <label for="artista">Artista</label>
+          <input id="artista" type="text" placeholder="Artista principal" />
 
-    <hr />
-    <h4>Review</h4>
-    <div id="detailReview"></div>
-  </div>
-</section>
+          <label for="genero">Gênero</label>
+          <input id="genero" type="text" placeholder="Ex: Eletronic, Rock" />
 
-  </main>  <script src="persistence.js"></script>  <script src="ui.js"></script></body>
+          <label for="capa">Capa (imagem)</label>
+          <input id="capa" type="file" accept="image/*" />
+          <div style="margin-top: 8px" id="capaPreview"></div>
+
+          <hr />
+          <h4>Músicas</h4>
+          <div id="songsContainer" class="songs-list"></div>
+          <button type="button" id="addSongBtn" class="btn ghost">
+            + Adicionar música
+          </button>
+
+          <div class="form-actions">
+            <button class="btn" type="submit">Salvar álbum</button>
+            <button class="btn ghost" type="button" id="resetAlbum">
+              Limpar
+            </button>
+          </div>
+        </form>
+
+        <hr />
+
+        <h3>Review rápido</h3>
+        <form id="reviewForm">
+          <label for="albumSelect">Álbum</label>
+          <select id="albumSelect"></select>
+
+          <label>Estrelas</label>
+          <div id="starPicker" class="stars"></div>
+
+          <label for="obs">Observações</label>
+          <textarea id="obs" rows="3"></textarea>
+
+          <div class="form-actions">
+            <button class="btn" type="submit">Salvar review</button>
+            <button class="btn ghost" type="button" id="resetReview">
+              Limpar
+            </button>
+          </div>
+        </form>
+
+        <footer>Os dados são armazenados localmente.</footer>
+      </aside>
+
+      <section>
+        <div class="card">
+          <h3>Álbuns</h3>
+          <div class="albums" id="albumsList"></div>
+        </div>
+
+        <div class="card" id="detailCard" hidden>
+          <div class="detail-header">
+            <div class="cover" id="detailCover"></div>
+            <div class="detail-info">
+              <h3 id="detailTitle"></h3>
+              <div id="detailMeta"></div>
+            </div>
+            <div class="actions" id="detailActions"></div>
+          </div>
+
+          <hr />
+          <h4>Músicas</h4>
+          <div id="detailSongs"></div>
+
+          <hr />
+          <h4>Review</h4>
+          <div id="detailReview"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
 </html>
