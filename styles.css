@@ -1,0 +1,46 @@
+
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: Inter, system-ui, Segoe UI, Roboto, Arial;
+  padding: 24px;
+  background: linear-gradient(180deg, #071024 0%, #071129 60%);
+  color: #e6eef8;
+}
+
+header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+	font-size: 20px;
+}
+
+.lead {
+	color: #94a3b8;
+}
+
+.card {
+  background: #0b1220;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+label {
+	display: block;
+}
+
+.star {
+	font-size: 1.3rem;
+	cursor: pointer;
+}
