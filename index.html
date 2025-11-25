@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="pt-BR">
   <head>
@@ -17,66 +17,74 @@
       </div>
     </header>
     <main class="layout">
-      <aside class="card">
-        <h3>Novo Álbum</h3>
-        <form id="albumForm">
-          <label for="nome">Título</label>
-          <input
-            id="nome"
-            required
-            type="text"
-            placeholder="Nome do álbum"
-          /><label for="data">Data de lançamento</label>
-          <input id="data" type="date" />
+      <section>
+        <div class="sidebar">
+          <aside class="card">
+            <h3>Novo Álbum</h3>
+            <form id="albumForm">
+              <label for="nome">Título</label>
+              <input
+                id="nome"
+                required
+                type="text"
+                placeholder="Nome do álbum"
+              /><label for="data">Data de lançamento</label>
+              <input id="data" type="date" />
 
-          <label for="artista">Artista</label>
-          <input id="artista" type="text" placeholder="Artista principal" />
+              <label for="artista">Artista</label>
+              <input id="artista" type="text" placeholder="Artista principal" />
 
-          <label for="genero">Gênero</label>
-          <input id="genero" type="text" placeholder="Ex: Eletronic, Rock" />
+              <label for="genero">Gênero</label>
+              <input
+                id="genero"
+                type="text"
+                placeholder="Ex: Eletronic, Rock"
+              />
 
-          <label for="capa">Capa (imagem)</label>
-          <input id="capa" type="file" accept="image/*" />
-          <div style="margin-top: 8px" id="capaPreview"></div>
+              <label for="capa">Capa (imagem)</label>
+              <input id="capa" type="file" accept="image/*" />
+              <div style="margin-top: 8px" id="capaPreview"></div>
 
-          <hr />
-          <h4>Músicas</h4>
-          <div id="songsContainer" class="songs-list"></div>
-          <button type="button" id="addSongBtn" class="btn ghost">
-            + Adicionar música
-          </button>
+              <hr />
+              <h4>Músicas</h4>
+              <div id="songsContainer" class="songs-list"></div>
+              <button type="button" id="addSongBtn" class="btn ghost">
+                + Adicionar música
+              </button>
 
-          <div class="form-actions">
-            <button class="btn" type="submit">Salvar álbum</button>
-            <button class="btn ghost" type="button" id="resetAlbum">
-              Limpar
-            </button>
-          </div>
-        </form>
+              <div class="form-actions">
+                <button class="btn" type="submit">Salvar álbum</button>
+                <button class="btn ghost" type="button" id="resetAlbum">
+                  Limpar
+                </button>
+              </div>
+            </form>
+          </aside>
 
-        <hr />
+          <aside class="card">
+            <h3>Review rápido</h3>
+            <form id="reviewForm">
+              <label for="albumSelect">Álbum</label>
+              <select id="albumSelect"></select>
 
-        <h3>Review rápido</h3>
-        <form id="reviewForm">
-          <label for="albumSelect">Álbum</label>
-          <select id="albumSelect"></select>
+              <label>Estrelas</label>
+              <div id="starPicker" class="stars"></div>
 
-          <label>Estrelas</label>
-          <div id="starPicker" class="stars"></div>
+              <label for="obs">Observações</label>
+              <textarea id="obs" rows="3"></textarea>
 
-          <label for="obs">Observações</label>
-          <textarea id="obs" rows="3"></textarea>
+              <div class="form-actions">
+                <button class="btn" type="submit">Salvar review</button>
+                <button class="btn ghost" type="button" id="resetReview">
+                  Limpar
+                </button>
+              </div>
+            </form>
 
-          <div class="form-actions">
-            <button class="btn" type="submit">Salvar review</button>
-            <button class="btn ghost" type="button" id="resetReview">
-              Limpar
-            </button>
-          </div>
-        </form>
-
-        <footer>Os dados são armazenados localmente.</footer>
-      </aside>
+            <footer>Os dados são armazenados localmente.</footer>
+          </aside>
+        </div>
+      </section>
 
       <section>
         <div class="card">
@@ -118,29 +126,41 @@
             <p id="modalDate"></p>
           </div>
         </div>
-        
+
         <hr />
-        
+
         <div class="modal-section">
           <h3>Músicas</h3>
           <ul id="modalSongs" class="songs-list-modal"></ul>
         </div>
-        
+
         <hr />
-        
+
         <div class="modal-section">
           <h3>Resenha</h3>
           <div id="reviewDisplay" class="review-display"></div>
-          <form id="reviewFormModal" style="display: none;">
+          <form id="reviewFormModal" style="display: none">
+            <label>Avaliação (Estrelas)</label>
+            <div id="modalStarPicker" class="stars-modal"></div>
             <label for="reviewText">Escreva sua resenha:</label>
-            <textarea id="reviewText" rows="6" placeholder="Compartilhe seus pensamentos sobre este álbum..."></textarea>
+            <textarea
+              id="reviewText"
+              rows="6"
+              placeholder="Compartilhe seus pensamentos sobre este álbum..."
+            ></textarea>
             <div class="form-actions">
               <button type="submit" class="btn">Salvar Resenha</button>
-              <button type="button" class="btn ghost" id="cancelReview">Cancelar</button>
+              <button type="button" class="btn ghost" id="cancelReview">
+                Cancelar
+              </button>
             </div>
           </form>
-          <button id="editReviewBtn" class="btn" style="display: none;">Editar Resenha</button>
-          <button id="newReviewBtn" class="btn" style="display: none;">Escrever Resenha</button>
+          <button id="editReviewBtn" class="btn" style="display: none">
+            Editar Resenha
+          </button>
+          <button id="newReviewBtn" class="btn" style="display: none">
+            Escrever Resenha
+          </button>
         </div>
       </div>
     </div>
