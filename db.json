@@ -1,0 +1,25 @@
+{
+    "albuns":[
+        {
+            "createdAt": "2025-11-25T13:20:39.938Z",
+            "nome": "Just My Imagination (Running Away With Me)",
+            "capa": "https://picsum.photos/seed/QUOikU/2306/2828",
+            "genero": "Sleep",
+            "musicas": [{"nome": "Just My Imagination (Running Away With Me)", "duracao": "3:20"}],
+            "artista": "Corbinhaven",
+            "id": "1"
+        },
+        {
+            "createdAt": "2025-11-25T15:36:28.375Z",
+            "nome": "Sweet Georgia Brown",
+            "capa": "https://loremflickr.com/69/3251?lock=7440434239627064",
+            "genero": "Celtic Folk",
+            "musicas": [{"nome": "Sweet Georgia Brown", "duracao": "3:20"}],
+            "artista": "Littlemouth",
+            "id": "2"
+        }
+    ],
+    "reviews":[
+
+    ]
+}
