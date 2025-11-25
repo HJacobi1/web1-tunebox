@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>TuneBox — Protótipo</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
@@ -81,7 +81,7 @@
       <section>
         <div class="card">
           <h3>Álbuns</h3>
-          <div class="albums" id="albumsList"></div>
+          <div class="albums" id="albunsList"></div>
         </div>
 
         <div class="card" id="detailCard" hidden>
@@ -104,6 +104,46 @@
         </div>
       </section>
     </main>
+
+    <!-- Modal para visualizar álbum, músicas e resenha -->
+    <div id="albumModal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div class="modal-header">
+          <img id="modalCover" src="" alt="Album Cover" class="modal-cover" />
+          <div class="modal-album-info">
+            <h2 id="modalTitle"></h2>
+            <p id="modalArtist"></p>
+            <p id="modalGenre"></p>
+            <p id="modalDate"></p>
+          </div>
+        </div>
+        
+        <hr />
+        
+        <div class="modal-section">
+          <h3>Músicas</h3>
+          <ul id="modalSongs" class="songs-list-modal"></ul>
+        </div>
+        
+        <hr />
+        
+        <div class="modal-section">
+          <h3>Resenha</h3>
+          <div id="reviewDisplay" class="review-display"></div>
+          <form id="reviewFormModal" style="display: none;">
+            <label for="reviewText">Escreva sua resenha:</label>
+            <textarea id="reviewText" rows="6" placeholder="Compartilhe seus pensamentos sobre este álbum..."></textarea>
+            <div class="form-actions">
+              <button type="submit" class="btn">Salvar Resenha</button>
+              <button type="button" class="btn ghost" id="cancelReview">Cancelar</button>
+            </div>
+          </form>
+          <button id="editReviewBtn" class="btn" style="display: none;">Editar Resenha</button>
+          <button id="newReviewBtn" class="btn" style="display: none;">Escrever Resenha</button>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="script.js"></script>
