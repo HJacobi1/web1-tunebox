@@ -20,6 +20,12 @@
         }
     ],
     "reviews":[
-
+        {
+            "createdAt": "2025-11-17T23:59:21.329Z",
+            "albumId": "1",
+            "estrelas": 4,
+            "observacoes": "observacoes 1",
+            "id": "1"
+        }
     ]
 }
